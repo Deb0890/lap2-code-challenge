@@ -26,8 +26,23 @@ class Entry {
                 let entryData = await db.query(`SELECT * FROM entries WHERE id = $1;`, [ id ]);
                 let entry = new Entry(entryData.rows[0]);
                 resolve (entry);
+            } catch (err){
+                reject('Entry not found');
             }
-        })
+        });
     }
 
+    static create(title, name, story){
+        return new Promise (async (resolve, reject) => {
+            try {
+                let  = await db.query(`INSERT INTO entries (title, name, story) VALUES ($1, $2, $3) RETURNING *;`, [ story, name, story ]);
+                let newEntry = new Entry(entryData.rows[0]);
+                resolve (newEntry);
+            } catch (err) {
+                reject('Error creating entry');
+            }
+        });
+    }
 }
+
+module.exports = Entry;
