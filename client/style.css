@@ -22,7 +22,14 @@
     padding: 10px;
  }
 
- .form-section, input {
-    outline: none;
- }
+ form, input {
+ border-width:0px;
+ border:none;
+ outline:none;
+}
 
+textarea {
+border-width:0px;
+border:none;
+outline:none;
+}
