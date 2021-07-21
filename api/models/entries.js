@@ -8,17 +8,17 @@ class Entry {
         this.story = data.story
     }
 
-    static get all() {
-        return new Promise (async (resolve, reject) => {
-            try {
-                const entriesData = await db.query(`SELECT * FROM entries;`)
-                const entries = entriesData.rows.map(d = new Entry(d))
-                resolve(entries);
-            } catch (err) {
-                reject("Error retrieving entries")
-            }
-        })
-    }
+    // static get all() {
+    //     return new Promise (async (resolve, reject) => {
+    //         try {
+    //             const entriesData = await db.query(`SELECT * FROM entries;`)
+    //             const entries = entriesData.rows.map(d = new Entry(d))
+    //             resolve(entries);
+    //         } catch (err) {
+    //             reject("Error retrieving entries")
+    //         }
+    //     })
+    // }
 
     static findById (id) {
         return new Promise (async (resolve, reject) => {

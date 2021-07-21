@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Telegraph</title>
 </head>
 <body>
     <div id="content">
         <!-- <button id="msg-btn">Click here to receive a message from The Other Side!</button> -->
         <form id="new-entry" action="">
-            <label for="title"></label>
-            <input type="text" id="title" placeholder="Title"/>
-            <label for="name"></label>
-            <input type="text" id="name" placeholder="Your name"/>
-            <label for="story"></label>
-            <textarea type="text" id="story" placeholder="Your story..."></textarea>
+            <div class="form-section">
+                <label for="title"></label>
+                <input type="text" id="title" placeholder="Title"/>
+            </div>
+            
+            <div class="form-section">
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="Your name"/>
+            </div>
+
+            <div class="form-section">
+                <label for="story"></label>
+                <textarea type="text" id="story" placeholder="Your story..."></textarea>
+            </div>
+
             <input type="submit" value="Submit">
         </form>
     </div>

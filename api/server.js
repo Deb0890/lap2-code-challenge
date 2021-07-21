@@ -9,8 +9,6 @@ server.use(express.json());
 
  server.use('/entries', entryRoutes)
 
- const port = process.env.PORT || 3000;
-
  server.get('/', (req, res) => res.send('Hello, client!'))
 
  module.exports = server
