@@ -22,14 +22,16 @@
     padding: 10px;
  }
 
- form, input {
+ #title, #name, #story {
  border-width:0px;
  border:none;
  outline:none;
 }
 
-textarea {
-border-width:0px;
-border:none;
-outline:none;
+input[type=submit] {
+   margin-left: 10px;
+   background-color: white;
+   border-radius: 10px;
+   border-color: black;
+   padding: 5px;
 }
